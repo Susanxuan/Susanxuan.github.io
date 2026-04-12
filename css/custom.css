@@ -559,47 +559,13 @@ section {
 #misc { animation-delay: 0.5s; }
 
 /* ==========================================================================
-   Visitor Map (clustrmaps)
+   Visitor Map (clustrmaps) — very bottom of page, centered
    ========================================================================== */
 .visitor-map {
-    text-align: center;
-    clear: both;
     width: 100%;
-    max-width: 720px;
-    margin: 30px auto 20px;
-    padding: 20px 16px 10px;
-}
-
-.visitor-map-title {
-    font-size: 15px;
-    font-weight: 600;
-    color: #5a6072;
-    margin: 0 0 14px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    position: relative;
-    display: inline-block;
-    padding: 0 12px;
-}
-
-.visitor-map-title::before,
-.visitor-map-title::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #c8cfdd);
-}
-
-.visitor-map-title::before {
-    right: 100%;
-    background: linear-gradient(90deg, transparent, #c8cfdd);
-}
-
-.visitor-map-title::after {
-    left: 100%;
-    background: linear-gradient(90deg, #c8cfdd, transparent);
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 16px 30px;
 }
 
 .visitor-map-widget {
@@ -607,13 +573,7 @@ section {
     width: 320px;
     max-width: 100%;
     height: 220px;
-    padding: 10px;
-    background: #ffffff;
-    border: 1px solid #e8ecf2;
-    border-radius: 10px;
-    box-shadow: 0 4px 18px rgba(76, 95, 214, 0.08);
     overflow: hidden;
-    vertical-align: middle;
 }
 
 .visitor-map-widget > * {
@@ -623,7 +583,7 @@ section {
 
 @media screen and (max-width: 600px) {
     .visitor-map {
-        margin: 20px auto 10px;
+        padding: 15px 10px 25px;
     }
     .visitor-map-widget {
         width: 280px;
