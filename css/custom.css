@@ -557,3 +557,112 @@ section {
 #awards { animation-delay: 0.3s; }
 #teaching { animation-delay: 0.4s; }
 #misc { animation-delay: 0.5s; }
+
+/* ==========================================================================
+   Visitor statistics (footer)
+   ========================================================================== */
+.visitor-stats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin: 14px 0 10px;
+    padding: 10px 14px;
+    background: linear-gradient(135deg, rgba(76, 95, 214, 0.08), rgba(118, 75, 162, 0.08));
+    border: 1px solid rgba(76, 95, 214, 0.18);
+    border-radius: 8px;
+    font-size: 13px;
+    color: #4a5060;
+    line-height: 1.4;
+}
+
+.visitor-stats .vs-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.visitor-stats .vs-item i {
+    color: #4c5fd6;
+}
+
+.visitor-stats .vs-item b {
+    color: #4c5fd6;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    min-width: 1.4em;
+    display: inline-block;
+    text-align: center;
+}
+
+.visitor-stats .vs-sep {
+    color: #b5bccc;
+}
+
+.visitor-stats .vs-badge {
+    margin-left: auto;
+    line-height: 0;
+}
+
+.visitor-stats .vs-badge img {
+    height: 20px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 600px) {
+    .visitor-stats {
+        justify-content: center;
+        text-align: center;
+    }
+    .visitor-stats .vs-badge {
+        margin: 4px auto 0;
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   Publication card polish — subtle lift on hover
+   ========================================================================== */
+.pub {
+    border-radius: 8px;
+    padding: 14px 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+                background-color 0.25s ease;
+}
+
+.pub:hover {
+    background-color: #fafbff;
+    box-shadow: 0 6px 20px rgba(76, 95, 214, 0.08);
+    transform: translateY(-2px);
+}
+
+.pub-left .intro-img {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pub:hover .pub-left .intro-img {
+    box-shadow: 0 6px 18px rgba(76, 95, 214, 0.18);
+}
+
+/* ==========================================================================
+   Section heading accent (publication-category)
+   ========================================================================== */
+.publication-category {
+    position: relative;
+    padding-left: 14px;
+}
+
+.publication-category::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 8px;
+    width: 4px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, #667eea, #9b3022);
+}
